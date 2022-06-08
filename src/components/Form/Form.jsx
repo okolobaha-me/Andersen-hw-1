@@ -9,6 +9,7 @@ export class Form extends Component {
           <label className={s.filed}>
             <span className={s.filedName}>Имя</span>
             <input
+              aria-invalid={true}
               required={true}
               className={s.input}
               name={'name'}
@@ -95,6 +96,14 @@ export class Form extends Component {
             placeholder={'Опишите ваш последний проект'}
           />
         </label>
+        <div className={s.formControlWrapper}>
+          <button type={'button'} className={s.formControl}>
+            Отмена
+          </button>
+          <button type={'submit'} className={s.formControl}>
+            Сохранить
+          </button>
+        </div>
       </form>
     );
   }
